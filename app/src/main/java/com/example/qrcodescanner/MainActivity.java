@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        From here
         CodeScannerView scannerView = findViewById(R.id.scanner_view);
         mCodeScanner = new CodeScanner(this, scannerView);
         mCodeScanner.setDecodeCallback(new DecodeCallback() {
@@ -76,8 +77,10 @@ public class MainActivity extends AppCompatActivity {
                         permissionToken.continuePermissionRequest();
                     }
                 }).check();
+//        to here
     }
 
+//    From here
     @Override
     protected void onResume() {
         super.onResume();
@@ -89,4 +92,5 @@ public class MainActivity extends AppCompatActivity {
         mCodeScanner.releaseResources();
         super.onPause();
     }
+//    to here
 }
